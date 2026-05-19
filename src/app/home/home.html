@@ -1,0 +1,41 @@
+<!-- <app-hero></app-hero> -->
+
+<!-- Trending Section -->
+<section class="mt-8 px-4">
+  <div class="flex items-center gap-2 mb-4">
+    <div class="bg-red-800 h-8 w-2 rounded-full"></div>
+    <span class="text-white text-2xl font-bold">Trending</span>
+  </div>
+  
+  @if (isLoading) {
+    <div class="loading text-white text-center p-8">Loading movies...</div>
+  } @else if (trendingMovies.length > 0) {
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+      @for (m of trendingMovies.slice(0, 4); track m.id) {
+        <app-movie-card [movie]="m"></app-movie-card>
+      }
+    </div>
+  } @else if (!isLoading && trendingMovies.length === 0) {
+    <div class="no-movies text-white text-center p-8">No trending movies found</div>
+  }
+</section>
+
+<!-- For You Section -->
+<section class="mt-12 px-4">
+  <div class="flex items-center gap-2 mb-4">
+    <div class="bg-red-800 h-8 w-2 rounded-full"></div>
+    <span class="text-white text-2xl font-bold">For You</span>
+  </div>
+  
+  @if (isLoading) {
+    <div class="loading text-white text-center p-8">Loading movies...</div>
+  } @else if (forYouMovies.length > 0) {
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+      @for (m of forYouMovies.slice(0, 4); track m.id) {
+        <app-movie-card [movie]="m"></app-movie-card>
+      }
+    </div>
+  } @else if (!isLoading && forYouMovies.length === 0) {
+    <div class="no-movies text-white text-center p-8">No recommendations found</div>
+  }
+</section>

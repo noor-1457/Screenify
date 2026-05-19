@@ -1,0 +1,115 @@
+<footer class="bg-gray-950 border-t border-gray-800 mt-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+    <!-- Top Section -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+      
+      <!-- Brand -->
+      <div class="space-y-4">
+        <div class="flex items-center gap-2">
+          <i class="bi bi-play-circle-fill text-red-600 text-3xl"></i>
+          <span class="text-white text-xl font-bold">Screenify</span>
+        </div>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Stream your favorite movies and TV shows anytime, anywhere.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2">
+          <li>
+            <a routerLink="/home" class="text-gray-400 hover:text-red-600 text-sm transition-colors duration-200">
+              Home
+            </a>
+          </li>
+          <li>
+            <a routerLink="/movies" class="text-gray-400 hover:text-red-600 text-sm transition-colors duration-200">
+              Movies
+            </a>
+          </li>
+          <li>
+            <a routerLink="/trending" class="text-gray-400 hover:text-red-600 text-sm transition-colors duration-200">
+              Trending
+            </a>
+          </li>
+          <li>
+            <a routerLink="/about" class="text-gray-400 hover:text-red-600 text-sm transition-colors duration-200">
+              About
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Support -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Support</h3>
+        <ul class="space-y-2">
+          <li>
+            <a href="#" class="text-gray-400 hover:text-red-600 text-sm transition-colors duration-200">
+              Help Center
+            </a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-400 hover:text-red-600 text-sm transition-colors duration-200">
+              Contact Us
+            </a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-400 hover:text-red-600 text-sm transition-colors duration-200">
+              FAQ
+            </a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-400 hover:text-red-600 text-sm transition-colors duration-200">
+              Report Issue
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Legal</h3>
+        <ul class="space-y-2">
+          <li>
+            <a href="#" class="text-gray-400 hover:text-red-600 text-sm transition-colors duration-200">
+              Terms of Service
+            </a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-400 hover:text-red-600 text-sm transition-colors duration-200">
+              Privacy Policy
+            </a>
+          </li>
+          <li>
+            <a href="#" class="text-gray-400 hover:text-red-600 text-sm transition-colors duration-200">
+              Cookie Policy
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="mt-8 pt-6 border-t border-gray-800">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+
+        <!-- Copyright -->
+        <div class="text-center order-1 md:order-2">
+          <p class="text-gray-500 text-sm">
+            © {{ currentYear }} Screenify. All rights reserved.
+          </p>
+        </div>
+
+        <!-- Back to Top -->
+        <button 
+          (click)="scrollToTop()"
+          class="text-gray-400 hover:text-red-600 transition-colors duration-200 order-3"
+        >
+          <i class="bi bi-arrow-up-circle text-xl"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</footer>

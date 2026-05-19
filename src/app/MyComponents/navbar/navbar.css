@@ -1,0 +1,16 @@
+.active-link {
+  background-color: #b91c1c; /* red-700 */
+  color: white;
+}
+
+/* Optional: Add smooth transition for the navbar */
+nav {
+  backdrop-filter: blur(12px);
+}
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+  nav .flex-row {
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,116 @@
+<nav
+  class="fixed top-0 left-0 right-0 z-50 bg-gray-950/95 backdrop-blur-md border-b border-gray-800 px-6 py-3"
+>
+  <div class="flex flex-row justify-between items-center">
+    <!-- Logo + Menu -->
+    <div class="flex items-center gap-1 md:gap-4">
+      <!-- <button
+        class="text-white text-2xl hover:bg-gray-800 h-10 w-10 rounded-full transition duration-300"
+      >
+        <i class="bi bi-list"></i>
+      </button> -->
+
+      <div class="flex items-center gap-2 cursor-pointer" routerLink="/home">
+        <i class="bi bi-play-circle-fill text-red-700 text-3xl"></i>
+        <h1 class="text-xl hidden md:block md:text-3xl font-bold text-white tracking-wide">
+          <span class="text-red-700">Screen</span>ify
+        </h1>
+      </div>
+    </div>
+
+    <!-- Center Links -->
+    <div class="hidden md:flex items-center gap-2 bg-gray-900/50 rounded-full px-4 py-1">
+      <a
+        routerLink="/home"
+        routerLinkActive="active-link"
+        class="px-4 py-2 rounded-full hover:bg-red-800 transition duration-300 text-white font-medium"
+      >
+        Home
+      </a>
+      <a
+        routerLink="/movies"
+        routerLinkActive="active-link"
+        class="px-4 py-2 rounded-full hover:bg-red-800 transition duration-300 text-white font-medium"
+      >
+        Movies
+      </a>
+    </div>
+      <!-- Logout Button -->
+    <!-- <button 
+      *ngIf="authService.isAuthenticated()"
+      (click)="logout()"
+      class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg text-white transition"
+    >
+      Logout
+    </button> -->
+
+    <!-- Search -->
+    <div class="relative bg-gray-900 border border-gray-700 rounded-full overflow-hidden">
+      <i class="bi bi-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+      <i class="bi bi-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+      <input
+        type="text"
+        placeholder="Search"
+        class="w-40 md:w-60 h-11 bg-transparent text-white pl-11 pr-10 focus:outline-none placeholder:text-gray-400"
+      />
+      <button
+        class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition"
+      >
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile menu button (optional - for small screens) -->
+<div class="md:hidden fixed bottom-6 right-6 z-50">
+  <button class="bg-red-700 text-white p-4 rounded-full shadow-lg">
+    <i class="bi bi-grid-3x3-gap-fill text-xl"></i>
+  </button>
+</div>
+
+<!-- Mobile Bottom Navigation -->
+<div
+  class="md:hidden fixed bottom-0 left-0 right-0 bg-gray-950/95 backdrop-blur-md border-t border-gray-800 px-6 py-2 z-50"
+>
+  <div class="flex justify-around items-center">
+    <a
+      routerLink="/home"
+      routerLinkActive="active-mobile"
+      class="flex flex-col items-center py-2 px-4 rounded-lg"
+    >
+      <i class="bi bi-house-door-fill text-xl"></i>
+      <span class="text-xs mt-1">Home</span>
+    </a>
+    <a
+      routerLink="/profile"
+      routerLinkActive="active-mobile"
+      class="flex flex-col items-center py-2 px-4 rounded-lg"
+    >
+      <i class="bi bi-info-circle-fill text-xl"></i>
+      <span class="text-xs mt-1">Sign In</span>
+    </a>
+    <a
+      routerLink="/movies"
+      routerLinkActive="active-mobile"
+      class="flex flex-col items-center py-2 px-4 rounded-lg"
+    >
+      <i class="bi bi-clock-history text-xl"></i>
+      <span class="text-xs mt-1">Movies</span>
+    </a>
+  </div>
+</div>
+
+<!-- Add padding bottom for mobile to prevent content hiding behind bottom nav -->
+<style>
+  @media (max-width: 768px) {
+    .main-content {
+      padding-bottom: 70px;
+    }
+  }
+
+  .active-mobile {
+    background-color: #b91c1c;
+    color: white;
+  }
+</style>

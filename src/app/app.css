@@ -1,0 +1,42 @@
+.main-container {
+  display: flex;
+  padding-top: 72px; /* Adjust based on your navbar height */
+  min-height: 100vh;
+}
+
+app-sidebar {
+  width: 280px;
+  transition: width 0.3s ease;
+  flex-shrink: 0;
+}
+
+.content {
+  flex: 1;
+  transition: margin 0.3s ease;
+  padding: 20px;
+}
+
+/* When sidebar is closed */
+.sidebar-closed app-sidebar {
+  width: 0;
+  overflow: hidden;
+}
+
+.sidebar-hidden {
+  margin-left: 0;
+}
+
+/* Optional: Add responsive behavior */
+@media (max-width: 768px) {
+  app-sidebar {
+    position: fixed;
+    z-index: 40;
+    height: 100vh;
+    background: #030712;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.3);
+  }
+  
+  .sidebar-closed app-sidebar {
+    width: 0;
+  }
+}

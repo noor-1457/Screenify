@@ -1,0 +1,22 @@
+<div
+  class="w-35 h-50 md:h-80 md:w-64 border border-gray-800 rounded-2xl p-4 shadow-lg bg-gray-900 text-white hover:scale-105 transition-transform duration-300"
+>
+  <img
+    class="w-full h-20 md:h-48 object-cover rounded-lg mb-3"
+    [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
+    loading="lazy"
+    [alt]="movie.title"
+  />
+
+  <h2 class="text-sm font-semibold truncate">
+    {{ movie.title }}
+  </h2> 
+
+  <p class="text-xs text-yellow-400 mt-1">⭐ {{ movie.vote_average }}</p>
+
+  <button
+    class="mt-3 bg-red-600 hover:bg-red-700 px-3 py-1 cursor-pointer rounded-lg text-sm w-full"
+  >
+    Play
+  </button>
+</div>
