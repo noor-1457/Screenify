@@ -1,0 +1,23 @@
+<div class="container text-white mt-20 border border-3 border-red-900 rounded-2xl p-10 items-center justify-center place-items-center h-auto w-96">
+  <h1 class="text-2xl md:block md:text-3xl font-bold text-white tracking-wide">
+    <span class="text-red-700">Sign</span>Up
+  </h1>
+  <div class="p-5">
+    <form  class="space-y-4 max-w-md mx-auto">
+      <input  required type="text" placeholder="Enter Name" class="w-full h-11 bg-gray-800 text-white px-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-600 placeholder:text-gray-400">
+      <input  required type="text" placeholder="Enter Last Name" class="w-full h-11 bg-gray-800 text-white px-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-600 placeholder:text-gray-400">  
+      <input  required type="email" placeholder="Enter your email" class="w-full h-11 bg-gray-800 text-white px-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-600 placeholder:text-gray-400">
+      <input  required type="password" placeholder="Confirm your password" class="w-full h-11 bg-gray-800 text-white px-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-600 placeholder:text-gray-400">
+
+      <!-- @if (errorMessage) {
+        <div class="text-red-500 text-sm text-center">
+          {{ errorMessage }}
+        </div>
+      } -->
+
+      <button type="submit" class="w-full bg-red-800 hover:bg-red-700 text-white font-semibold py-2 rounded-xl transition duration-300">Submit</button>
+    </form>
+   
+    <p>Already have an account ? <a routerLink="/Login" class="text-red-800 underline">Login</a></p>
+  </div>
+</div>

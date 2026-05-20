@@ -1,11 +1,11 @@
 <div class="container text-white mt-20 border border-3 border-red-900 rounded-2xl p-10 items-center justify-center place-items-center h-auto w-96">
   <h1 class="text-2xl md:block md:text-3xl font-bold text-white tracking-wide">
-    <span class="text-red-700">Sign</span>In
+    <span class="text-red-700">Login</span>In
   </h1>
   <div class="p-5">
     <form (ngSubmit)="onSubmit()" class="space-y-4 max-w-md mx-auto">
-      <input [(ngModel)]="email" type="email" placeholder="Email" class="w-full h-11 bg-gray-800 text-white px-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-600 placeholder:text-gray-400">
-      <input [(ngModel)]="password" type="password" placeholder="Password" class="w-full h-11 bg-gray-800 text-white px-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-600 placeholder:text-gray-400">
+      <input required [(ngModel)]="email" type="email" name="email" placeholder="Email" class="w-full h-11 bg-gray-800 text-white px-4 rounded-xl focus:bg-transparent focus:outline-none focus:ring-2 focus:ring-red-600 placeholder:text-gray-400">
+      <input required [(ngModel)]="password" type="password" name="password" placeholder="Password" class="w-full h-11 bg-gray-800 text-white px-4 rounded-xl focus:bg-transparent focus:outline-none focus:ring-2 focus:ring-red-600 placeholder:text-gray-400">
 
       @if (errorMessage) {
         <div class="text-red-500 text-sm text-center">
@@ -20,5 +20,6 @@
       Email: any@email.com<br>
       Password: anything
     </div>
+    <p>Don't have an account ? <a routerLink="/signup" class="text-red-800 underline">signup</a></p>
   </div>
 </div>
